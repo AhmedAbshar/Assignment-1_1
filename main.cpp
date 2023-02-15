@@ -23,7 +23,7 @@ public:
     }
 
 };
-
+// the constructor initializes the head pointer to null.
 class Storage
 {
 public:
@@ -124,7 +124,8 @@ bool swap(int i, int j) {
         }
         node_i = node_i->next;
     }
-            
+     // the function swaps the nodes and returns true.
+       
     if (n1 != NULL && n2!=NULL) {
         Node * temp = n1->next;
         n1->next = n2->next;
@@ -133,6 +134,7 @@ bool swap(int i, int j) {
         n1->next->next = n2->next->next;
         n2->next->next = temp;
         return true;
+     // the function swaps the head of the linked list with the node at position j and returns true.   
     } else if (i==0 && n2!=NULL) {
         Node * temp = this->head;
         Node * temp2 = n2->next->next;
@@ -141,6 +143,7 @@ bool swap(int i, int j) {
         this->head->next = temp->next;
         n2->next->next = temp2;
         return true;
+      // the function swaps the head of the linked list with the node at position i and returns true.  
     } else if (j==0 && n1!=NULL) {
         Node * temp = this->head;
         Node * temp2 = n1->next->next;
